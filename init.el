@@ -71,6 +71,9 @@ There are two things you can do about this warning:
 ;; Enable soft-wrapping
 (visual-line-mode)
 
+;; Highlight matching brackets 
+(show-paren-mode)
+
 ;; Custom keybindings
 (global-set-key (kbd "C-c f") 'format-all-buffer)
 (global-set-key (kbd "C-c e") 'eval-buffer)
