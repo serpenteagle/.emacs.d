@@ -8,7 +8,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(package-selected-packages
    (quote
-    (evil-surround evil-commentary projectile ace-window which-key format-all evil))))
+    (markdown-mode evil-surround evil-commentary projectile ace-window which-key format-all evil))))
 
 ;; Set up MELPA
 (require 'package)
@@ -51,7 +51,7 @@ There are two things you can do about this warning:
 
 ;; Enable relative line numbering
 (setq display-line-numbers-type 'relative)
-(display-line-numbers-mode)
+(global-display-line-numbers-mode)
 
 ;; Get rid of unnecesary UI elements
 (menu-bar-mode -1)
