@@ -8,7 +8,7 @@
  '(custom-enabled-themes (quote (deeper-blue)))
  '(package-selected-packages
    (quote
-    (markdown-mode evil-surround evil-commentary projectile ace-window which-key format-all evil))))
+    (exec-path-from-shell smooth-scrolling markdown-mode evil-surround evil-commentary projectile ace-window which-key format-all evil))))
 
 ;; Set up MELPA
 (require 'package)
@@ -36,6 +36,9 @@ There are two things you can do about this warning:
 (evil-commentary-mode)
 (evil-surround-mode)
 
+;; Set proper PATH
+(exec-path-from-shell-initialize)
+
 ;; Set up projectile
 (setq projectile-project-search-path '("~/Projects"))
 (projectile-mode +1)
@@ -52,6 +55,10 @@ There are two things you can do about this warning:
 ;; Enable relative line numbering
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
+
+;; Scrole line-by-line
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
 
 ;; Get rid of unnecesary UI elements
 (menu-bar-mode -1)
