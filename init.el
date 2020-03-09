@@ -70,6 +70,11 @@ There are two things you can do about this warning:
 
 ;; Enable soft-wrapping
 (visual-line-mode)
+
+;; Custom keybindings
+(global-set-key (kbd "C-c f") 'format-all-buffer)
+(global-set-key (kbd "C-c e") 'eval-buffer)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
