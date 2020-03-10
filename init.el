@@ -34,7 +34,7 @@ There are two things you can do about this warning:
 (require 'evil)
 (evil-mode 1)
 (evil-commentary-mode)
-(evil-surround-mode)
+(global-evil-surround-mode)
 
 ;; Set proper PATH
 (exec-path-from-shell-initialize)
@@ -60,6 +60,10 @@ There are two things you can do about this warning:
 (require 'smooth-scrolling)
 (smooth-scrolling-mode 1)
 
+;; disable auto-save and auto-backup
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+
 ;; Get rid of unnecesary UI elements
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
@@ -73,6 +77,11 @@ There are two things you can do about this warning:
 
 ;; Highlight matching brackets 
 (show-paren-mode)
+
+;; Auto-complete brackets
+(electric-pair-mode)
+
+(setq-default tab-width 2)
 
 ;; Custom keybindings
 (global-set-key (kbd "C-c f") 'format-all-buffer)
