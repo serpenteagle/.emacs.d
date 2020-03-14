@@ -73,7 +73,10 @@ There are two things you can do about this warning:
 (set-face-attribute 'fringe nil :background nil)
 
 ;; Enable soft-wrapping
-(visual-line-mode)
+(global-visual-line-mode)
+
+;;Turn off vertical fringes
+(fringe-mode '(0 . 0))
 
 ;; Highlight matching brackets 
 (show-paren-mode)
