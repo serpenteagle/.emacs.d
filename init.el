@@ -4,11 +4,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
-   ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
+	 ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(custom-enabled-themes (quote (deeper-blue)))
+ '(org-modules
+	 (quote
+		(org-bbdb org-bibtex org-docview org-gnus org-info org-irc org-mhe org-rmail org-w3m org-drill)))
  '(package-selected-packages
-   (quote
-    (exec-path-from-shell smooth-scrolling markdown-mode evil-surround evil-commentary projectile ace-window which-key format-all evil))))
+	 (quote
+		(evil-org org-drill exec-path-from-shell smooth-scrolling markdown-mode evil-surround evil-commentary projectile ace-window which-key format-all evil))))
 
 ;; Set up MELPA
 (require 'package)
